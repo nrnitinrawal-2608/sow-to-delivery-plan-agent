@@ -35,13 +35,17 @@ Chat trigger -> AI Agent -> Google Gemini chat model
 
 > Migrate 5,000 users from an on-prem web proxy to a cloud SWG over 12 weeks. Customer provides IdP access and network team support. Includes policy migration, pilot with 100 users, 3 rollout waves, and 2 weeks of hypercare. Out of scope: endpoint hardware changes.
 
+**Result: full delivery plan**
+
+![Full plan output](screenshots/01-first-plan.png)
+
 **Follow-up used to test memory:**
 
 > Move the pilot to Week 5 and add a 2-week buffer before Wave 3. Update the milestone plan.
 
-The agent returned an updated milestone plan with the pilot in Week 5, a 2-week stabilisation buffer, and Wave 3 in Week 10, still within the 12-week schedule.
+**Result: revised plan**
 
-![Full plan output](screenshots/01-first-plan.png)
+The agent returned an updated milestone plan with the pilot in Week 5, a 2-week stabilisation buffer, and Wave 3 in Week 10, still within the 12-week schedule.
 
 ![Revised plan after follow-up](screenshots/02-memory-update.png)
 
