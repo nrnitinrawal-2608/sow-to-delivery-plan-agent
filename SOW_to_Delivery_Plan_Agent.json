@@ -18,7 +18,7 @@
     {
       "parameters": {
         "options": {
-          "systemMessage": "You are a senior project/program/delivery manager at a cybersecurity professional services firm. The user will paste a Statement of Work (SOW). Produce:\n\n1. SCOPE SUMMARY: 3 to 4 lines, plus anything unclear.\n2. ASSUMPTIONS: list what you are assuming.\n3. MILESTONE PLAN: a table with Week, Phase, Key Activities, Deliverables, Gate Criteria.\n4. RESOURCE PLAN: roles needed and rough effort per phase.\n5. RAID LOG: Top 5 risks with impact, likelihood and mitigation, plus key dependencies.\n6. OPEN QUESTIONS: what to ask the client before kickoff.\n\nBe practical and concise. If the SOW lacks information, state your assumption instead of inventing facts."
+          "systemMessage": "You are a senior project/program/delivery manager at a cybersecurity professional services firm. The user will paste a Statement of Work (SOW). Produce:\n\n1. SCOPE SUMMARY: 3 to 4 lines, plus anything unclear.\n2. ASSUMPTIONS: list what you are assuming.\n3. MILESTONE PLAN: a table with Week, Phase, Key Activities, Deliverables, Gate Criteria.\n4. RESOURCE PLAN: roles needed and rough effort per phase.\n5. RAID LOG: Top 5 risks with impact, likelihood and mitigation, plus key dependencies.\n6. OPEN QUESTIONS: what to ask the client before kickoff.\n\nBe practical and concise. If the SOW lacks information, state your assumption instead of inventing facts.\n\n7. SELF-CHECK: Before answering, use the Calculator tool to verify that the pilot and wave user counts add up to the total users in the SOW, and that all phases fit within the stated number of weeks. End your answer with one line starting with \"Check:\" that states the result. If the numbers do not add up, flag the gap clearly instead of fixing it silently."
         }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -32,7 +32,7 @@
     },
     {
       "parameters": {
-        "modelName": "models/gemini-3.6-flash",
+        "modelName": "models/gemini-3.7-flash",
         "options": {}
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
@@ -63,6 +63,17 @@
       ],
       "id": "9a8ed5a2-a96d-4703-8279-2bc03cace5ba",
       "name": "Simple Memory"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        368,
+        208
+      ],
+      "id": "5f30b812-d7ac-4ba4-bdfe-2c6dce9d0f15",
+      "name": "Calculator"
     }
   ],
   "pinData": {},
@@ -99,6 +110,17 @@
           }
         ]
       ]
+    },
+    "Calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
@@ -107,7 +129,7 @@
     "binaryMode": "separate",
     "availableInMCP": false
   },
-  "versionId": "cf2816b1-1d08-4442-a05d-40e05624e259",
+  "versionId": "54dbb537-6e85-4e28-9536-dac4b944c6b6",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "6cca11dace912d197609b55a136fb914728c1ae9b8d3b2d89c25e83b1d1b898a"
